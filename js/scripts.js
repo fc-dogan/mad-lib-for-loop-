@@ -4,13 +4,27 @@ $(document).ready(function() {
 
     var inputs = ["person1","person2", "animal", "exclamation", "verb", "noun"];
     var inputValues = [];
-    inputs.forEach(function(input) {
-      inputValues.push($("input#" + input).val());
-    })
-    inputs.forEach(function(input, index){
-      $("."+ input).text(inputValues[index])
     
-    }) 
+    for(var index = 0; index <inputs.length; index += 1 ){
+      inputValues.push($("input#" + inputs[index]).val());
+      $("."+ inputs[index]).text(inputValues[index]);
+      
+    }
+    
+
+
+
+
+
+    // var inputs = ["person1","person2", "animal", "exclamation", "verb", "noun"];
+    // var inputValues = [];
+    // inputs.forEach(function(input) {
+    //   inputValues.push($("input#" + input).val());
+    // })
+    // inputs.forEach(function(input, index){
+    //   $("."+ input).text(inputValues[index])
+    
+    // }) 
 
 
     // var person1Input = $("input#person1").val();
